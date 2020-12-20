@@ -1,0 +1,31 @@
+body {
+  /* background-color: #343650; */
+  background-color: #1e1f29;
+  font-family: 'Red Hat Text', sans-serif;
+  /* color: #fff; */
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.bg-stars {
+  background-image: url("images/bg-stars.svg");
+  background-size: contain;
+  height: 70vh;
+}
+
+.bg-hills {
+  background-image: url("images/pattern-hills.svg");
+  background-size: contain;
+  height: 30vh;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
