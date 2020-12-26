@@ -28,6 +28,7 @@ h1 {
   width: 100%;
   position: absolute;
   bottom: 0;
+  z-index: -3;
 }
 
 .squares {
@@ -36,14 +37,18 @@ h1 {
 }
 
 .timeBox {
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
   height: 120px;
   width: 120px;
-  background: linear-gradient(to bottom, hsl(236, 21%, 21%), hsl(236, 21%, 21%) 49.5%, #191a24, #191a24 50.5%, #343650, #343650 50.5%);
   border-radius: 10px;
   justify-self: center;
   display: inline-block;
   box-shadow: 0 10px #191a24;
+  transform-style: preserve-3d;
+  background: linear-gradient(to bottom, #2a2c41, #2a2c41 49.5%, #191a24, #191a24 50.5%, #343650, #343650 50.5%);
 }
+
 
 .pointBoxLeft {
   height: 14px;
@@ -76,7 +81,7 @@ h1 {
 .boxText {
   display: inline;
   font-size: 4rem;
-  background-image: linear-gradient(to bottom, #fb567f, #fb567f 49.8%, #191a24, #191a24 50.2%, #fb6087, #fb6087 50.2%);
+  background-image: linear-gradient(to bottom, #fb567f, #fb567f 49.5%, #191a24, #191a24 50.5%, #fb6087, #fb6087 50.5%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -90,6 +95,7 @@ h1 {
   letter-spacing: 7px;
   position: relative;
   top: 20px;
+  display: inline;
 }
 
 .attribution {

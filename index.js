@@ -1,5 +1,9 @@
+
+var date = new Date();
+date.setDate(date.getDate() + 14);
+
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+var countDownDate = date.getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -21,6 +25,33 @@ var x = setInterval(function() {
   document.getElementById("hoursText").innerHTML = hours;
   document.getElementById("minutesText").innerHTML = minutes;
   document.getElementById("secondsText").innerHTML = seconds;
+
+  document.getElementsByClassName("timeBox")[3].style.transform = "rotateX(180deg)";
+  setTimeout(function(){
+    document.getElementsByClassName("timeBox")[3].style.transform = "rotateX(0deg)";
+  }, 50);
+
+  if (seconds === 59) {
+    document.getElementsByClassName("timeBox")[2].style.transform = "rotateX(180deg)";
+    setTimeout(function(){
+      document.getElementsByClassName("timeBox")[2].style.transform = "rotateX(0deg)";
+    }, 50);
+  }
+
+  if (minutes === 59 && seconds == 59) {
+    document.getElementsByClassName("timeBox")[1].style.transform = "rotateX(180deg)";
+    setTimeout(function(){
+      document.getElementsByClassName("timeBox")[1].style.transform = "rotateX(0deg)";
+    }, 50);
+  }
+
+  if (hours === 23 && minutes === 59 && seconds == 59) {
+    document.getElementsByClassName("timeBox")[0].style.transform = "rotateX(180deg)";
+    setTimeout(function(){
+      document.getElementsByClassName("timeBox")[0].style.transform = "rotateX(0deg)";
+    }, 50);
+  }
+
 
   // If the count down is finished, write some text
   if (distance < 0) {
