@@ -2,28 +2,100 @@ body {
   /* background-color: #343650; */
   background-color: #1e1f29;
   font-family: 'Red Hat Text', sans-serif;
-  /* color: #fff; */
-  height: 100vh;
+  color: #fff;
   margin: 0;
-  box-sizing: border-box;
+  text-align: center;
+}
 
+h1 {
+  font-size: 1.1rem;
+  letter-spacing: 7px;
+  margin: 80px 0;
 }
 
 .bg-stars {
   background-image: url("images/bg-stars.svg");
-  background-size: contain;
-  height: 70vh;
+  background-repeat: no-repeat;
+  height: 65vh;
+  margin: 0;
 }
 
 .bg-hills {
   background-image: url("images/pattern-hills.svg");
-  background-size: contain;
-  height: 30vh;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 25vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.squares {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 150px);
+}
+
+.timeBox {
+  height: 120px;
+  width: 120px;
+  background: linear-gradient(to bottom, hsl(236, 21%, 21%), hsl(236, 21%, 21%) 49.5%, #191a24, #191a24 50.5%, #343650, #343650 50.5%);
+  border-radius: 10px;
+  justify-self: center;
+  display: inline-block;
+  box-shadow: 0 10px #191a24;
+}
+
+.pointBoxLeft {
+  height: 14px;
+  width: 7px;
+  border-bottom-right-radius: 14px;
+  border-top-right-radius: 14px;
+  position: relative;
+  top: 53px;
+  background-color: #191a24;
+}
+
+.pointBoxRight {
+  height: 14px;
+  width: 7px;
+  border-bottom-right-radius: 14px;
+  border-top-right-radius: 14px;
+  position: relative;
+  top: 39px;
+  left: 113px;
+  background-color: #191a24;
+  transform: scaleX(-1);
+}
+
+.line {
+  position: relative;
+  top: 22px;
+
+}
+
+.boxText {
+  display: inline;
+  font-size: 4rem;
+  background-image: linear-gradient(to bottom, #fb567f, #fb567f 49.8%, #191a24, #191a24 50.2%, #fb6087, #fb6087 50.2%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  bottom: 10px;
+}
+
+.descriptionText {
+  color: hsl(237, 18%, 59%);
+  font-size: 0.7rem;
+  letter-spacing: 7px;
+  position: relative;
+  top: 20px;
 }
 
 .attribution {
+  position: relative;
+  top: 20vh;
   font-size: 11px;
-  text-align: center;
 }
 
 .attribution a {
