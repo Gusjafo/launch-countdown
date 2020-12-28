@@ -102,6 +102,10 @@ h1 {
   margin: 10px;
 }
 
+.share img:hover {
+  filter: invert(50%) sepia(25%) saturate(1975%) hue-rotate(303deg) brightness(97%) contrast(104%);
+}
+
 .attribution {
   font-size: 10px;
   padding-top: 2vh;
