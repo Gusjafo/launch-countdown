@@ -1,8 +1,7 @@
 body {
-  /* background-color: #343650; */
   background-color: #1e1f29;
-  font-family: 'Red Hat Text', sans-serif;
   color: #fff;
+  font-family: 'Red Hat Text', sans-serif;
   margin: 0;
   text-align: center;
 }
@@ -10,100 +9,142 @@ body {
 h1 {
   font-size: 1.1rem;
   letter-spacing: 7px;
-  margin: 80px 0;
+  margin: 0 20px;
+  padding: 80px 0;
 }
 
 .bg-stars {
   background-image: url("images/bg-stars.svg");
-  background-repeat: no-repeat;
-  height: 65vh;
-  margin: 0;
+  background-repeat: repeat-x;
+  background-size: auto;
+  height: 75vh;
+  width: 100vw;
 }
 
 .bg-hills {
   background-image: url("images/pattern-hills.svg");
-  background-repeat: no-repeat;
-  margin: 0;
+  background-repeat: repeat-x;
+  background-size: auto;
   height: 25vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: -3;
+  width: 100vw;
 }
 
 .squares {
   display: inline-grid;
   grid-template-columns: repeat(4, 150px);
+  margin: 10px;
 }
 
 .timeBox {
-  transition: transform 0.2s;
-  transform-style: preserve-3d;
-  height: 120px;
-  width: 120px;
-  border-radius: 10px;
-  justify-self: center;
-  display: inline-block;
-  box-shadow: 0 10px #191a24;
-  transform-style: preserve-3d;
   background: linear-gradient(to bottom, #2a2c41, #2a2c41 49.5%, #191a24, #191a24 50.5%, #343650, #343650 50.5%);
+  border-radius: 10px;
+  box-shadow: 0 10px #191a24;
+  display: inline-block;
+  height: 120px;
+  justify-self: center;
+  transform-style: preserve-3d;
+  transition: transform 0.2s;
+  width: 120px;
 }
 
-
 .pointBoxLeft {
-  height: 14px;
-  width: 7px;
+  background-color: #191a24;
   border-bottom-right-radius: 14px;
   border-top-right-radius: 14px;
+  height: 14px;
   position: relative;
   top: 53px;
-  background-color: #191a24;
+  width: 7px;
 }
 
 .pointBoxRight {
-  height: 14px;
-  width: 7px;
+  background-color: #191a24;
   border-bottom-right-radius: 14px;
   border-top-right-radius: 14px;
+  height: 14px;
+  left: 113px;
   position: relative;
   top: 39px;
-  left: 113px;
-  background-color: #191a24;
   transform: scaleX(-1);
+  width: 7px;
 }
 
 .line {
   position: relative;
   top: 22px;
-
 }
 
 .boxText {
+  background-clip: text;
+  background-image: linear-gradient(to bottom, #fb567f, #fb567f 49.5%, #191a24, #191a24 50.5%, #fb6087, #fb6087 50.5%);
+  bottom: 10px;
+  color: transparent;
   display: inline;
   font-size: 4rem;
-  background-image: linear-gradient(to bottom, #fb567f, #fb567f 49.5%, #191a24, #191a24 50.5%, #fb6087, #fb6087 50.5%);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
   position: relative;
-  bottom: 10px;
+  -webkit-background-clip: text;
 }
 
 .descriptionText {
-  color: hsl(237, 18%, 59%);
+  color: #8486a9;
+  display: inline;
   font-size: 0.7rem;
   letter-spacing: 7px;
   position: relative;
-  top: 20px;
-  display: inline;
+  top: 10px;
+}
+
+.share {
+  padding-top: 14vh;
+}
+
+.share a {
+  margin: 10px;
 }
 
 .attribution {
-  position: relative;
-  top: 20vh;
-  font-size: 11px;
+  font-size: 10px;
+  padding-top: 2vh;
 }
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (max-width: 650px) {
+  .squares {
+    grid-template-columns: repeat(4, 66px);
+  }
+
+  .timeBox {
+    height: 60px;
+    width: 60px;
+  }
+
+  .pointBoxLeft {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 10px;
+    top: 25px;
+    width: 5px;
+  }
+
+  .pointBoxRight {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 10px;
+    left: 55px;
+    top: 15px;
+    width: 5px;
+  }
+
+  .boxText {
+    bottom: 12px;
+    font-size: 2rem;
+  }
+
+  .descriptionText {
+    font-size: 0.4rem;
+    letter-spacing: 2px;
+  }
 }

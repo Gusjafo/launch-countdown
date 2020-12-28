@@ -51,8 +51,7 @@ var x = setInterval(function() {
       document.getElementsByClassName("timeBox")[0].style.transform = "rotateX(0deg)";
     }, 50);
   }
-
-
+  
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
